@@ -1,0 +1,37 @@
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+    <img width="40" alt="Angular Logo"
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+    <span>Firebase Authentication in Angular</span>
+</div>
+
+<div class="content" role="main">
+
+    <h2>Welcome!</h2>
+    <div class="card-container">
+        <label class="input-field-label" for="email">Email</label>
+        <div>
+            <input type="email" class="input-field" placeholder="Enter email" [(ngModel)]="email" />
+        </div>
+        <label class="input-field-label" for="email">Password</label>
+        <div>
+            <input type="password" class="input-field" placeholder="Enter password" [(ngModel)]="password" />
+        </div>
+        <span *ngIf="hasErrors" class="error-messages">Invalid inputs</span>
+        <button class="card card-small" (click)="signUp(email, password)" tabindex="0">
+            <span>Sign up</span>
+        </button>
+        <button class="card card-small" (click)="signIn(email, password)" tabindex="0">
+            <span>Sign in</span>
+        </button>
+        <button class="card card-small" (click)="googleAuth()" tabindex="0">
+            <span>Google</span>
+        </button>
+
+        <button class="card card-small" (click)="githubAuth()" tabindex="0">
+            <span>Github </span>
+        </button>
+    </div>
+
+</div>

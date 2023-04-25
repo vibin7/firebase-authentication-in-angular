@@ -1,0 +1,34 @@
+
+
+<div class="card-container">
+    <h2>Authentication Successful!</h2>
+
+    <div class="user-info">
+        {{ 'Provider: ' + user?.providerId }}
+    </div>
+    <div class="user-info">
+        {{ 'Email: ' + user?.email }} {{ 'Email Verified: ' + user?.emailVerified }}
+    </div>
+    <div class="user-info">
+        {{ 'UID: ' + user?.uid }}
+    </div>
+
+    <div class="card-container">
+
+        <h3>Providers Available</h3>
+
+        <div *ngFor="let provider of user?.providerData">
+            <div class="user-info">
+                {{ provider?.displayName }}
+            </div>
+
+            <div class="user-info">
+                {{ provider?.providerId }}
+            </div>
+        </div>
+        <button class="card card-small" (click)="signOut()" tabindex="0">
+            <span>Log out</span>
+        </button>
+    </div>
+
+</div>
