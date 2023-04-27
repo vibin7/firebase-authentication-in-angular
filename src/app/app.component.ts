@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'typescript-decorators-in-angular';
+  title = 'firebase-authentication-in-angular';
   email!: string;
   password!: string;
 

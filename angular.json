@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "typescript-decorators-in-angular": {
+    "firebase-authentication-in-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "typescript-decorators-in-angular:build:production"
+              "browserTarget": "firebase-authentication-in-angular:build:production"
             },
             "development": {
-              "browserTarget": "typescript-decorators-in-angular:build:development"
+              "browserTarget": "firebase-authentication-in-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "typescript-decorators-in-angular:build"
+            "browserTarget": "firebase-authentication-in-angular:build"
           }
         },
         "test": {
@@ -100,8 +100,22 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

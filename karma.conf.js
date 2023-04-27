@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/typescript-decorators-in-angular'),
+      dir: require('path').join(__dirname, './coverage/firebase-authentication-in-angular'),
       subdir: '.',
       reporters: [
         { type: 'html' },
